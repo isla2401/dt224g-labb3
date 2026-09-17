@@ -1,0 +1,11 @@
+:root{
+    /* Färger */
+    --dark-green: #283618;
+    --light-green: #535D2D;
+    --dark-orange: #8F4300;
+    --beige: #FEFAE0;
+
+    /* Fonter */
+    --font-regular: font-family: "Open Sans", sans-serif;
+    --font-fancy: font-family: "Idiqlat", serif;
+}
