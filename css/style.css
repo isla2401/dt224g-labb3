@@ -1,11 +1,23 @@
-:root{
-    /* Färger */
-    --dark-green: #283618;
-    --light-green: #535D2D;
-    --dark-orange: #8F4300;
-    --beige: #FEFAE0;
+:root {
+  /* Färger */
+  --dark-green: #283618;
+  --light-green: #535d2d;
+  --dark-orange: #8f4300;
+  --beige: #fefae0;
 
-    /* Fonter */
-    --font-regular: font-family: "Open Sans", sans-serif;
-    --font-fancy: font-family: "Idiqlat", serif;
+  /* Fonter */
+  --font-regular: "Open Sans", sans-serif;
+  --font-fancy: "Idiqlat", serif;
+}
+
+/* Styling som appliceras på allt */
+* {
+  box-sizing: border-box; /* Inkluderar elementens padding och border i dess totala mått */
+}
+
+/* Grundstil */
+body {
+  margin: 0; /* Tar bort den margin som body har från början */
+  font-family: var(--font-regular);
+  background-color: var(--beige);
 }
