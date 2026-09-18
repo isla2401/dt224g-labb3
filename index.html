@@ -23,15 +23,21 @@
   <body>
     <!-- Sidhuvud med navigation -->
     <header>
-      <a href="index.html"
-        ><img
-          src="images/logotyp_svart.png"
-          alt="Norrgläntans logotyp, länkar till startsidan"
-      /></a>
-      <p class="site-name">NORRGLÄNTAN</p>
+      <!-- Logga och sidans namn -->
+      <div class="brand">
+        <a href="index.html"
+          ><img
+            src="images/logotyp_vit.png"
+            alt="Norrgläntans logotyp, länkar till startsidan"
+            class="logo"
+        /></a>
+        <a href="index.html">
+          <p class="site-name">NORRGLÄNTAN</p>
+        </a>
+      </div>
 
       <!-- Navigationsmeny -->
-      <nav>
+      <nav class="nav-header">
         <ul>
           <li><a href="#">Upptäck</a></li>
           <li><a href="#">Aktiviteter</a></li>
@@ -121,6 +127,7 @@
         ><img
           src="images/logotyp_svart.png"
           alt="Norrgläntans logotyp, länkar till startsidan"
+          class="logo"
       /></a>
 
       <p class="site-name">NORRGLÄNTAN</p>
@@ -138,7 +145,7 @@
       <!-- Navigationsmeny -->
       <section>
         <h3>Länkar</h3>
-        <nav>
+        <nav class="nav-footer">
           <ul>
             <li><a href="#">Upptäck</a></li>
             <li><a href="#">Aktiviteter</a></li>

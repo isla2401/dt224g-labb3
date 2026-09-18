@@ -8,16 +8,76 @@
   /* Fonter */
   --font-regular: "Open Sans", sans-serif;
   --font-fancy: "Idiqlat", serif;
+
+  /* Spacing */
+  --site-edge-spacing: 5vw; /* 5% av skärmens bredd */
 }
+
+/* ============================= ALLMÄNT ============================= */
 
 /* Styling som appliceras på allt */
 * {
-  box-sizing: border-box; /* Inkluderar elementens padding och border i dess totala mått */
+  box-sizing: border-box;
 }
 
-/* Grundstil */
+/* Grundstil för hela sidan */
 body {
   margin: 0; /* Tar bort den margin som body har från början */
   font-family: var(--font-regular);
   background-color: var(--beige);
+}
+
+/* Styling av bilder */
+img {
+  max-width: 100%;
+}
+
+/* Nollställ utseendet på listorna i nav */
+nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling av texten med sidans namn*/
+.site-name {
+  font-family: var(--font-fancy);
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+/* ============================= HEADER ============================= */
+
+/* Styling av header */
+header {
+  background-color: var(--dark-green);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling av containern för loggan och sidans namn i headern */
+header .brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 10px var(--site-edge-spacing);
+}
+
+/* Styling av loggan i headern */
+header .logo {
+  width: 50px;
+}
+
+/* Styling av alla länkar i header, inklusive de i nav */
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Styling av list-items i headerns nav */
+.nav-header li {
+  border-bottom: 1px solid #6c7742;
+  background-color: var(--light-green);
+  padding: 10px calc(var(--site-edge-spacing) + 20px);
 }
