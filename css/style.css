@@ -2,7 +2,8 @@
   /* Färger */
   --dark-green: #283618;
   --light-green: #535d2d;
-  --dark-orange: #8f4300;
+  --orange: #8f4300;
+  --dark-orange: #753700;
   --beige: #fefae0;
 
   /* Fonter */
@@ -32,11 +33,49 @@ img {
   max-width: 100%;
 }
 
+/* Styling av h1 */
+h1 {
+  font-size: 1.5rem;
+  font-family: var(--font-fancy);
+  font-weight: normal;
+}
+
+/* Styling av h2 */
+h2 {
+  font-size: 1.4rem;
+}
+
 /* Nollställ utseendet på listorna i nav */
-nav ul{
+nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+/* Styling av knappar */
+.button {
+  text-decoration: none;
+  color: white;
+  background-color: var(--orange);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+/* Ändra knappens bakgrundsfärg när muspekaren hålls över */
+.button:hover{
+    background-color: var(--dark-orange);
+}
+
+/* Definera hur lång tid animationen för pil-ikonen i knappen ska ta */
+.button svg{
+  transition: transform 0.2s;
+}
+
+/* Flytta pil-ikonen i knappen till höger när muspekaren hålls över knappen */
+.button:hover svg {
+  transform: translateX(4px);
 }
 
 /* Styling av texten med sidans namn*/
@@ -81,3 +120,24 @@ header a {
   background-color: var(--light-green);
   padding: 10px calc(var(--site-edge-spacing) + 20px);
 }
+
+/* ============================= MAIN ============================= */
+
+/* Centrera all text i main */
+main {
+  text-align: center;
+}
+
+/* Styling av hero-sektionen */
+.hero {
+  background-color: var(--dark-green);
+  color: white;
+  padding-bottom: 25px;
+}
+
+/* Lägg till margin på sidorna av alla element i hero-sektionen utom på bilden */
+.hero > *:not(.hero-img-mobile) {
+  margin-left: var(--site-edge-spacing);
+  margin-right: var(--site-edge-spacing);
+}
+
