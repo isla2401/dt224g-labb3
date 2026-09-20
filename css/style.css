@@ -16,66 +16,35 @@
 
 /* ============================= ALLMÄNT ============================= */
 
-/* Styling som appliceras på allt */
 * {
   box-sizing: border-box;
 }
 
-/* Grundstil för hela sidan */
 body {
-  margin: 0; /* Tar bort den margin som body har från början */
+  margin: 0;
   font-family: var(--font-regular);
   background-color: var(--beige);
 }
 
-/* Styling av bilder */
 img {
   max-width: 100%;
 }
 
-/* Styling av h1 */
 h1 {
   font-size: 1.5rem;
   font-family: var(--font-fancy);
   font-weight: normal;
 }
 
-/* Styling av h2 */
 h2 {
   font-size: 1.4rem;
 }
 
-/* Nollställ utseendet på listorna i nav */
+/* Nollställer utseendet på listorna i nav */
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-/* Styling av knappar */
-.button {
-  text-decoration: none;
-  color: white;
-  background-color: var(--orange);
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.2s;
-}
-
-/* Ändra knappens bakgrundsfärg när muspekaren hålls över */
-.button:hover {
-  background-color: var(--dark-orange);
-}
-
-/* Definera hur lång tid animationen för pil-ikonen i knappen ska ta */
-.button svg {
-  transition: transform 0.2s;
-}
-
-/* Flytta pil-ikonen i knappen till höger när muspekaren hålls över knappen */
-.button:hover svg {
-  transform: translateX(4px);
 }
 
 /* Styling av texten med sidans namn*/
@@ -85,9 +54,33 @@ nav ul {
   margin: 0;
 }
 
+/* ----- Knappar ----- */
+.button {
+  text-decoration: none;
+  color: white;
+  background-color: var(--orange);
+  display: inline-block; /* Gör att knappen inte beter sig som en text, men tar inte heller upp hela bredden av sidan */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: var(--dark-orange);
+}
+
+/* Pil-ikonen i knapparna */
+.button svg {
+  transition: transform 0.2s;
+}
+
+/* Animation för pil-ikonen i knapparna */
+.button:hover svg {
+  transform: translateX(4px);
+}
+
 /* ============================= HEADER ============================= */
 
-/* Styling av header */
 header {
   background-color: var(--dark-green);
   color: white;
@@ -95,7 +88,7 @@ header {
   flex-direction: column;
 }
 
-/* Styling av containern för loggan och sidans namn i headern */
+/* Containern för loggan och sidans namn i headern */
 header .brand {
   display: flex;
   align-items: center;
@@ -103,18 +96,15 @@ header .brand {
   margin: 10px var(--site-edge-spacing);
 }
 
-/* Styling av loggan i headern */
 header .logo {
   width: 50px;
 }
 
-/* Styling av alla länkar i header, inklusive de i nav */
 header a {
   color: white;
   text-decoration: none;
 }
 
-/* Styling av list-items i headerns nav */
 .nav-header li {
   border-bottom: 1px solid #6c7742;
   background-color: var(--light-green);
@@ -123,19 +113,17 @@ header a {
 
 /* ============================= MAIN ============================= */
 
-/* Centrera all text i main */
 main {
   text-align: center;
 }
 
-/* Styling av hero-sektionen */
 .hero {
   background-color: var(--dark-green);
   color: white;
   padding-bottom: 25px;
 }
 
-/* Lägg till margin på sidorna av alla element i hero-sektionen utom på bilden */
+/* Lägger till margin på sidorna av alla element i hero-sektionen utom bilden */
 .hero > *:not(.hero-img-mobile) {
   margin-left: var(--site-edge-spacing);
   margin-right: var(--site-edge-spacing);
