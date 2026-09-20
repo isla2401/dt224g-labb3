@@ -64,12 +64,12 @@ nav ul {
 }
 
 /* Ändra knappens bakgrundsfärg när muspekaren hålls över */
-.button:hover{
-    background-color: var(--dark-orange);
+.button:hover {
+  background-color: var(--dark-orange);
 }
 
 /* Definera hur lång tid animationen för pil-ikonen i knappen ska ta */
-.button svg{
+.button svg {
   transition: transform 0.2s;
 }
 
@@ -140,4 +140,3 @@ main {
   margin-left: var(--site-edge-spacing);
   margin-right: var(--site-edge-spacing);
 }
-
