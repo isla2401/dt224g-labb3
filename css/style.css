@@ -174,5 +174,54 @@ main {
 /* ----- Avslutning ----- */
 
 .ending-container {
-  padding: 10px var(--site-edge-spacing) 20px;
+  padding: 10px var(--site-edge-spacing) 25px;
 }
+
+/* ============================= FOOTER ============================= */
+
+footer {
+  background-color: var(--dark-green);
+  color: white;
+  padding: 25px var(--site-edge-spacing);
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+  row-gap: 20px;
+}
+
+/* Containern för loggan, sidans namn och citat i footern */
+footer .brand {
+  grid-column: 1/3;
+  text-align: center;
+}
+
+footer .logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+footer .quote {
+  margin: 0;
+}
+
+footer h3 {
+  margin: 10px 0;
+}
+
+footer a {
+  color: white;
+}
+
+address > * {
+  display: block; /* Gör att e-postadressen och telefonnumret inte hamnar på samma rad */
+  font-style: normal; /* Tar bort den kursiva stilen på texten */
+  margin: 5px 0;
+}
+
+.nav-footer li {
+  margin: 5px 0;
+}
+
+/* TODO
+- Ändra footer-grid för skärmar < 300px
+*/
