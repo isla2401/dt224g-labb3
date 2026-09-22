@@ -118,7 +118,7 @@ header a {
   padding: 10px calc(var(--site-edge-spacing) + 20px);
 }
 
-.nav-header a:hover{
+.nav-header a:hover {
   text-decoration: underline;
 }
 
@@ -258,7 +258,7 @@ address > * {
     --site-edge-spacing: 8vw; /* Öka utrymme mellan sidans kant och närmsta element till 8% av skärmens bredd */
   }
 
-  h1{
+  h1 {
     font-size: 1.8rem;
   }
 
@@ -275,7 +275,7 @@ address > * {
     margin: 0;
   }
 
-  header .logo{
+  header .logo {
     width: 65px;
   }
 
@@ -296,9 +296,15 @@ address > * {
   /* Anpassning: Text ovanpå hero-bild, mer luft, horisontella puffar, horisontell avslutning */
 
   .hero {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.35) 70%, rgba(0, 0, 0, 0) 100%), url(../images/hero.jpg); /* Bakgrundsbild och toning för ökad kontrast mellan text och bakgrund */
+    /* Bakgrundsbild och toning för ökad kontrast mellan text och bakgrund */
+    background:
+      linear-gradient(to right, rgba(0, 0, 0, 0.35) 70%, rgba(0, 0, 0, 0) 100%),
+      url(../images/hero.jpg);
+
+    /* Skärmens bredd * förhållandet mellan bakgrundsbildens höjd och bredd (800/1920=0,4166) = bakgrundsbildens nya höjd i samma förhållande */
+    height: calc(100vw * 0.4166);
+
     background-size: cover;
-    height: calc(100vw * 0.4166); /* Skärmens bredd * förhållandet mellan bakgrundsbildens höjd och bredd (800/1920=0,4166) = bakgrundsbildens nya höjd i samma förhållande */
     max-height: 600px;
     display: flex; /* För att kunna centrera texten vertikalt */
     align-items: center;
@@ -313,7 +319,7 @@ address > * {
     display: none; /* Dölj bild eftersom den är ersatt av bakgrundsbild på .hero*/
   }
 
-  .intro-container{
+  .intro-container {
     margin: 10px auto;
     padding: 10px 0;
     max-width: 600px;
@@ -372,7 +378,7 @@ address > * {
     --site-edge-spacing: 12vw; /* Öka utrymme mellan sidans kant och närmsta element till 12% av skärmens bredd */
   }
 
-  .nav-header ul{
+  .nav-header ul {
     gap: 35px;
   }
 
@@ -381,10 +387,10 @@ address > * {
   }
 
   .activities-container {
-      padding: 20px calc(var(--site-edge-spacing) + 80px) 25px;
+    padding: 20px calc(var(--site-edge-spacing) + 80px) 25px;
   }
 
-  .card-container{
+  .card-container {
     gap: 35px;
   }
 }
