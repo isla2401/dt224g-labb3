@@ -118,6 +118,10 @@ header a {
   padding: 10px calc(var(--site-edge-spacing) + 20px);
 }
 
+.nav-header a:hover{
+  text-decoration: underline;
+}
+
 /* ============================= MAIN ============================= */
 
 main {
@@ -254,6 +258,10 @@ address > * {
     --site-edge-spacing: 8vw; /* Öka utrymme mellan sidans kant och närmsta element till 8% av skärmens bredd */
   }
 
+  h1{
+    font-size: 1.8rem;
+  }
+
   /* ----- HEADER ----- */
   /* Anpassning: Horisontell navigationsmeny */
 
@@ -265,6 +273,10 @@ address > * {
 
   header .brand {
     margin: 0;
+  }
+
+  header .logo{
+    width: 65px;
   }
 
   .nav-header ul {
@@ -298,7 +310,7 @@ address > * {
   }
 
   .hero-img-mobile {
-    display: none; /* Dölj eftersom den är ersatt av bakgrundsbild på .hero*/
+    display: none; /* Dölj bild eftersom den är ersatt av bakgrundsbild på .hero*/
   }
 
   .intro-container{
@@ -330,11 +342,12 @@ address > * {
   }
 
   /* ----- FOOTER ----- */
-  /* Anpassning: Allt innehåll på en rad */
+  /* Anpassning: Allt innehåll på en rad, mer luft */
 
   footer {
     grid-template-columns: auto auto auto;
     justify-content: space-between;
+    padding: 40px var(--site-edge-spacing);
   }
 
   footer .brand {
@@ -359,11 +372,19 @@ address > * {
     --site-edge-spacing: 12vw; /* Öka utrymme mellan sidans kant och närmsta element till 12% av skärmens bredd */
   }
 
+  .nav-header ul{
+    gap: 35px;
+  }
+
   .intro-container {
     max-width: 900px;
   }
 
-  .activities-container{
+  .activities-container {
       padding: 20px calc(var(--site-edge-spacing) + 80px) 25px;
+  }
+
+  .card-container{
+    gap: 35px;
   }
 }
