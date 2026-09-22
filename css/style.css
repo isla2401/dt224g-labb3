@@ -51,7 +51,7 @@ nav ul {
   padding: 0;
 }
 
-/* Styling av texten med sidans namn*/
+/* Texten med sidans namn*/
 .site-name {
   font-family: var(--font-fancy);
   font-size: 1.15rem;
@@ -65,6 +65,7 @@ nav ul {
   color: white;
   background-color: var(--orange);
   display: inline-block; /* Gör att knappen inte beter sig som en text, men tar inte heller upp hela bredden av sidan */
+  height: fit-content;
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.2s;
@@ -103,6 +104,7 @@ header .brand {
 
 header .logo {
   width: 50px;
+  display: block; /* Gör att a-taggen runt loggan inte lämnar extra rum nedanför bilden */
 }
 
 header a {
@@ -130,10 +132,12 @@ main {
   padding-bottom: 25px;
 }
 
-/* Margin på sidorna av alla element i hero-sektionen utom bilden */
-.hero > *:not(.hero-img-mobile) {
-  margin-left: var(--site-edge-spacing);
-  margin-right: var(--site-edge-spacing);
+.hero-text {
+  margin: 0 var(--site-edge-spacing);
+}
+
+.hero-text br {
+  display: none;
 }
 
 /* ----- Introduktion ----- */
@@ -230,7 +234,7 @@ address > * {
 
 /* ============================= MEDIA QUERIES ============================= */
 
-/* Anpassar footerns layout till skärmar < 300px */
+/* Anpassar footerns layout för mycket små skärmar */
 @media (max-width: 300px) {
   footer {
     grid-template-columns: 1fr; /* Endast 1 kolumn istället för 2*/
@@ -239,5 +243,105 @@ address > * {
 
   footer .brand {
     grid-column: 1;
+  }
+}
+
+/* Anpassning av layout för stora skärmar */
+@media (min-width: 800px) {
+  :root {
+    --site-edge-spacing: 8vw; /* Öka utrymme mellan sidans kant och närmsta element till 8% av skärmens bredd */
+  }
+
+  /* ----- HEADER ----- */
+  /* Anpassning: Horisontell navigationsmeny */
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px var(--site-edge-spacing);
+  }
+
+  header .brand {
+    margin: 0;
+  }
+
+  .nav-header ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .nav-header li {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  /* ----- MAIN ----- */
+  /* Anpassning: Text ovanpå hero-bild, mer luft, horisontella puffar, horisontell avslutning */
+
+  .hero {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.35) 70%, rgba(0, 0, 0, 0) 100%), url(../images/hero.jpg); /* Bakgrundsbild och toning för ökad kontrast mellan text och bakgrund */
+    background-size: cover;
+    height: calc(100vw * 0.4166); /* Skärmens bredd * förhållandet mellan bakgrundsbildens höjd och bredd (800/1920=0,4166) = bakgrundsbildens nya höjd i samma förhållande */
+    display: flex; /* För att kunna centrera texten vertikalt */
+    align-items: center;
+    text-align: left;
+  }
+
+  .hero-text br {
+    display: initial; /* Visa <br> som varit dold på små skärmar. Gör att texten delas i två rader. */
+  }
+
+  .hero-img-mobile {
+    display: none; /* Dölj eftersom den är ersatt av bakgrundsbild på .hero*/
+  }
+
+  .intro-container {
+    max-width: 1000px;
+    margin: 10px auto;
+  }
+
+  .card-container {
+    flex-direction: row;
+  }
+
+  .card {
+    width: 100%; /* Ta upp allt tillgängligt utrymme, annars blir puffarna olika stora */
+  }
+
+  .ending-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  /* Containern för texten i avslutningssektionen, ej knappen */
+  .ending-container > :first-child {
+    width: 60%;
+  }
+
+  /* ----- FOOTER ----- */
+  /* Anpassning: Allt innehåll på en rad */
+
+  footer {
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+  }
+
+  footer .brand {
+    grid-column: 1;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+  }
+
+  footer .logo {
+    margin: 0;
   }
 }
