@@ -227,15 +227,14 @@ footer a {
   color: white;
 }
 
+footer a{
+  display: inline-block; /* För att kunna lägga till margin */
+  margin: 5px 0;
+}
+
 address > * {
   font-style: normal; /* Tar bort den kursiva stilen på texten */
-  margin: 5px 0;
 }
-
-.nav-footer li {
-  margin: 5px 0;
-}
-
 /* ============================= MEDIA QUERIES ============================= */
 
 /* Mycket små skärmar < 300px */
